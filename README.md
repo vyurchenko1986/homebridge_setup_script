@@ -16,9 +16,11 @@
 Для авторизации в веб-интерфейсе логин и пароль по умолчанию:
 
 Login: admin
+
 Password: admin
 
 Для авторизации  по SSH логин и пароль:
 
 Login: pi
+
 Password: QY32SFyTQfaHDTKd
