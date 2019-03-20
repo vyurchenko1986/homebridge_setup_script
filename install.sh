@@ -12,8 +12,11 @@ mkdir ~/.homebridge && cp config.json ~/.homebridge
 
 sudo npm i -g --unsafe-perm homebridge homebridge-config-ui-x
 sudo npm i -g install homebridge-ewelink-max
+sudo npm i -g install pm2
 
-sudo cp homebridge.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable homebridge
-sudo systemctl start homebridge
+pm2 start homebridge
+pm2 startup
+
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
+pm2 save
+sudo reboot
