@@ -25,6 +25,7 @@ Login: pi
 
 Password: QY32SFyTQfaHDTKd
 
+
 sudo apt install git make
 
 git clone https://github.com/vyurchenko1986/homebridge_setup_script.git
