@@ -1,24 +1,30 @@
 {
-	"bridge": {
-		"name": "HomeBridge",
-		"username": "CC:22:3D:E3:CE:30",
-		"port": 51826,
-		"pin": "031-45-154"
-	},
-	"accessories": [
-	],
-	"platforms": [
-		{
-			"platform": "config",
-			"name": "Config",
-			"port": 8080,
-			"sudo": true,
-			"temp": "/sys/class/thermal/thermal_zone0/temp",
-			"restart": "sudo -n systemctl restart homebridge",
-			"log": {
-                		"method": "systemd",
-                		"service": "homebridge"
-            		}
-		}
-	]
+    "bridge": {
+        "name": "HomeBridge",
+        "username": "f8:38:80:64:7a:86",
+        "port": 51825,
+        "pin": "031-45-987"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "platform": "config",
+            "name": "Config",
+            "port": 8080,
+            "sudo": true,
+            "temp": "/sys/class/thermal/thermal_zone0/temp",
+            "restart": "pm2 restart homebridge; sleep 5",
+            "log": {
+                "method": "custom",
+                "command": "sudo -n tail -n 100 -f /home/pi/.pm2/logs/homebridge-out.log"
+            }
+        },
+        {
+            "platform": "eWeLink",
+            "name": "eWeLink",
+            "email": "ewelink@gmail.com",
+            "password": "8Ckv2iEL",
+            "imei": "01294557-89AA-CDEF-0123-B827EB647A86"
+        }
+    ]
 }
