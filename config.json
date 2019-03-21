@@ -1,9 +1,9 @@
 {
     "bridge": {
         "name": "HomeBridge",
-        "username": "f8:38:80:64:7a:86",
+        "username": "CC:22:3D:E3:CE:45",
         "port": 51825,
-        "pin": "031-45-987"
+        "pin": "031-45-946"
     },
     "accessories": [],
     "platforms": [
@@ -23,8 +23,8 @@
             "platform": "eWeLink",
             "name": "eWeLink",
             "email": "b827eb647a86@gmail.com",
-            "password": "8Ckv2iEL",
-            "imei": "01294557-89AA-CDEF-0123-B827EB647A86"
+            "password": "8Zkv2iE3LQ",
+            "imei": "01294557-89AA-CDEF-0123-456789ABCDEF"
         }
     ]
 }
