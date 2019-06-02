@@ -1,3 +1,18 @@
+sudo raspi-config
+Далее выбираем Advanced Options → Expand Filesystem. Перезагружаемся.
+
+Увеличение размера файла подкачки.
+
+sudo nano /etc/dphys-swapfile
+
+Находим строчку CONF_SWAPSIZE=100
+
+И увеличиваем число например до 1024.
+
+Перезапускаем службу.
+sudo /etc/init.d/dphys-swapfile stop
+sudo /etc/init.d/dphys-swapfile start
+
 # Homebridge setup script
 
 Итак, что же делает этот скрипт?
